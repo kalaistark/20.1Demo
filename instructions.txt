@@ -36,3 +36,6 @@ app.get('/:id',(req, res)=>{
 
 1. git status -> to see untracked files
 2. git add . -> to move to staging area
+3. git commit -m "<message>" -> to commit changes
+4. git log -> to view commit history
+5. 
