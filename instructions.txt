@@ -15,8 +15,28 @@ CRUD
 1. account in mongodb atlas | connection
 2. mongoose
 3. dataSchema | dataModel
+4. new DataModel({}).save() -> to create new data
+5. DataModel.find({data}) -> to retrieve data
+6. DataModel.findByIdAndUpdate(id,{data}) -> to update data
+7. DataModel.findByIdAndDelete(id) -> to delete data
+================auth===============
+1. install passport passport-local passport-local-mongoose express-session
+2. Admin schema | Admin model
+3. Admin.plugin(passportLocalMongoose)
+4. app.use(express.session({
+    secret:"",
+    resave:"",
+    saveUninitialized:""
+}))
+5. app.use(passport.initialize())
+6. app.use(passport.session())
+7. app.use(new localStrategy(Admin.authenticate()))
+8. passport.serializeUser(Admin.serializeUser())
+9. passport.deserializeUser(Admin.deserializeUser())
+10. reg & log in ejs page
+11. reg / log routes
+=======
 =======
 3. git commit -m "<message>" -> to commit changes
 4. git log -> to view commit history
-5. 
 
