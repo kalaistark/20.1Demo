@@ -2,37 +2,16 @@
 2. local folder | git.init
 3. npm init | package.json | npm i express --save
 4. views directory | index.html
-
-
-
-app.get('/:id',(req, res)=>{
-    var fakeName = faker.name.firstName()
-    var fakeJob = faker.name.jobTitle()
-    var fakeJobDesc = faker.name.jobDescriptor()
-    res.render("index.ejs",{name:fakeName,job:fakeJob,jobDesc:fakeJobDesc})
-})
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Personal Details</h1>
-    <p> <%= name %> </p>
-    <p> <%= job %> </p>
-    <p> <%= jobDesc %> </p>
-</body>
-</html>
-
-
-
+=========Git=================
 1. git init
 2. git config user.name <name> | git config user.email <email>
 3. git remote add <alias name> <github url>
 
 1. git status -> to see untracked files
 2. git add . -> to move to staging area
+============db================
+CRUD
+
+1. account in mongodb atlas | connection
+2. mongoose
+3. dataSchema | dataModel
