@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Newsletter</title>
+    <title>Register / login</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -41,38 +41,40 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <p class="my-auto pr-2"  style="color:white;"><%= logedin.username %></p>
-            <a href="/logout" class="btn btn-warning">Logout</a>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
       </nav>
-    <h1>Post route demo</h1>
+    <h1>Register</h1>
     <div class="container">
-        <form action="/test" method="POST">
+        <form action="/register" method="POST">
             <div class="form-group">
-              <label for="exampleInputEmail1">Name</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Team</label>
-              <input type="text" class="form-control" id="exampleInputPassword1" name="team">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
     </div>
-    <div>
-      <h1>Registered Users</h1>
-      <% user.forEach((indUser)=>{ %>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title"><%= indUser.name %></h5>
-            <p> Team :  <%= indUser.team %> </p>
-            <a href="/update/<%= indUser._id %>" class="btn btn-primary">update</a>
-            <a href="/delete/<%= indUser._id %>" class="btn btn-danger">Delete</a>
-          </div>
-        </div>
-      <% }) %>
+    <h1>login</h1>
+    <div class="container">
+        <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
     </div>
 
     <!-- Optional JavaScript -->
