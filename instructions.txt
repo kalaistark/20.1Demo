@@ -35,3 +35,8 @@ CRUD
 9. passport.deserializeUser(Admin.deserializeUser())
 10. reg & log in ejs page
 11. reg / log routes
+=======
+=======
+3. git commit -m "<message>" -> to commit changes
+4. git log -> to view commit history
+
